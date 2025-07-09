@@ -15,15 +15,12 @@ export default function Counter({ initialCount }) {
 // Form Component
 export function NameForm() {
     const [name, setName] = useState("");
-
-    const handleChange = (e) => {
-        setName(e.target.value);//update the input value
+    const handleChange = (e) => { //this handlechange means update the state on every keystroke when user add inputs in input field
+        setName(e.target.value);
     };
-
-    const handleSubmit = () => {
+    const handleSubmit = () => {// when data submit it shows alert
         alert(`Hello, ${name}!`);
     };
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -32,6 +29,7 @@ export function NameForm() {
                     placeholder="Enter your name"
                     value={name}
                     onChange={handleChange}
+                    required
                 />
                 <button
                     type="submit"
