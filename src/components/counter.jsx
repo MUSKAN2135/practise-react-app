@@ -5,8 +5,8 @@ export default function Counter({ initialCount }) {
     const [count, setCount] = useState(initialCount);
 
     return (
-        <div >
-            <h2>Counter: {count}</h2>
+        <div className='text-center my-3'>
+            <h2 className='py-3'>Counter: {count}</h2>
             <button onClick={() => setCount(count + 1)} className='border rounded bg-gray-300 w-8 h-8 m-1 py-2'>+</button>
             <button onClick={() => setCount(count - 1)} className='border rounded bg-gray-300 w-8 h-8 m-1 py-2'>-</button>
         </div>
@@ -14,12 +14,12 @@ export default function Counter({ initialCount }) {
 }
 // Form Component
 export function NameForm() {
-    const [name, setName] = useState("");
+    const [myName, setmyName] = useState("");
     const handleChange = (e) => { //this handlechange means update the state on every keystroke when user add inputs in input field
-        setName(e.target.value);
+        setmyName(e.target.value);
     };
     const handleSubmit = () => {// when data submit it shows alert
-        alert(`Hello, ${name}!`);
+        alert(`Hello, ${myName}!`);
     };
     return (
         <div>
@@ -27,9 +27,10 @@ export function NameForm() {
                 <input
                     type="text"
                     placeholder="Enter your name"
-                    value={name}
+                    value={myName}
                     onChange={handleChange}
                     required
+                    className='border-1 border-gray-500 rounded-sm mr-3 pl-2'
                 />
                 <button
                     type="submit"

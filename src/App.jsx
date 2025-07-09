@@ -6,8 +6,8 @@ import Counter, { NameForm } from './components/counter'
 
 function App() {
   const homedata = {
-    title: "my homepage",
-    description: "Loremnvsgvhjhjhsbjbvhjbskjvhggvnvjh"
+    title: "My homepage",
+    description: "here is my practise data"
   }
   // const handleFormData = {
   //   First_Name: '',
@@ -18,9 +18,9 @@ function App() {
 
   return (
     <>
-      <div className='p-5 w-100 '>
-        {/* <Home home={homedata} />
-        <ContactUs onSubmitForm={handleFormData} />
+      <div className='p-5 w-full '>
+        <Home {...homedata} />
+        {/* <ContactUs onSubmitForm={handleFormData} />
         <About about1="Architects of the online realm sculpt seamless marvels, painting stories in pixels. Experience the extraordinary as technology dances with artistry, inviting all to a realm where innovation speaks and magic unfolds." />
         <Resume
           first="My Resume"
@@ -30,7 +30,7 @@ function App() {
           fifth="I actively contribute to the development and enhancement of web applications. My responsibilities involve implementing innovative features."
         /> */}
         <Counter initialCount={0} />
-        <NameForm />
+        {/* <NameForm /> */}
       </div>
     </>
   )
