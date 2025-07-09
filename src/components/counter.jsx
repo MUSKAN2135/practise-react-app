@@ -17,7 +17,7 @@ export function NameForm() {
     const [name, setName] = useState("");
 
     const handleChange = (e) => {
-        setName(e.target.value);
+        setName(e.target.value);//update the input value
     };
 
     const handleSubmit = () => {
